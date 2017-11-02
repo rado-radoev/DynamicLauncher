@@ -18,9 +18,22 @@ namespace DynamicLauncher
         public Form1()
         {
             InitializeComponent();
+            this.MinimizeBox = false;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.Fixed3D;
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+            label1.Text = string.Format("{0}\n\n\n{1}\n{2}",
+                "Application should be run from comamnd line",
+                "Example usage: ",
+                "-app=procmon.exe \n-start=C:\\Tools \n-args=/AcceptEula /Quiet /Minimized");
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
